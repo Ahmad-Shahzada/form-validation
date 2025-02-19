@@ -109,7 +109,11 @@ function App() {
         <div className="flex items-center justify-center">
           <button
             disabled={isSubmitting}
-            className="bg-slate-400 hover:bg-slate-300 text-white font-bold py-2 px-6 rounded-full focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-300"
+            className={`${
+              isSubmitting
+                ? "bg-gray-500 cursor-not-allowed"
+                : "bg-slate-400 hover:bg-slate-300"
+            } text-white font-bold py-2 px-6 rounded-full focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-300`}
           >
             {isSubmitting ? "Submitting..." : "Submit"}
           </button>
